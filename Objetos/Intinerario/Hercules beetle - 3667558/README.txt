@@ -1,0 +1,1 @@
+Hercules beetle by dendeba on Thingiverse: https://www.thingiverse.com/thing:3667558
