@@ -1,1 +1,0 @@
-beetle case by ippannzin on Thingiverse: https://www.thingiverse.com/thing:6200299
