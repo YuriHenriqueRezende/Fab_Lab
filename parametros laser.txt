@@ -5,7 +5,7 @@ ACRILICO 2mm, CORTE 60, 65 e 20 de velocidade, gravação 15, 20 e velocidade 20
 ACRILICO 6mm, CORTE 60, 65 e 8 de velocidade, gravação 15, 20 e velocidade 200, marcar 7, 12 e velocidade 40
 EVA, marcar 10,15 velocidade 200, corte 25, 30 e 200 de velocidade, gravação 7, 10 e 170 de velocidade
 PAPEL SULFITE, gravação 7, 10 e 200 de velocidade,  corte 12, 15 e 200 de velocidade, marcar 9, 11 velocidade 200
-PISO VINILICO,  gravação 7, 10 e 200 de velocidade,  corte 70, 75 e 60 de velocidade, marcar 9, 11 velocidade 200
+PISO VINILICO,  gravação 7, 10 e 200 de velocidade,  corte 70, 75 e 40 de velocidade, marcar 9, 11 velocidade 200
 ESPUMA,  corte 30, 35 e 40 de velocidade 
 
  
