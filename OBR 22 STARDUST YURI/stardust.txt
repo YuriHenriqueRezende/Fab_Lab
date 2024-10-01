@@ -1,0 +1,195 @@
+inicio
+	
+	enquanto (verdadeiro) farei
+	{
+	
+	levantar(110)
+	velocidadeatuador(100)
+	escrevernumero(1, inclinacao())
+	
+	#FRENTE - GAP
+	se (cor(1) == "BRANCO" e cor(2) == "BRANCO" e cor(3) == "BRANCO" e cor(4) == "BRANCO" e cor(5) == "BRANCO" ) entao
+		{
+       		frente(150)
+		}
+	se (cor(1) == "BRANCO" e cor(2) == "BRANCO"  e cor(3) == "PRETO" e cor(4) == "BRANCO" e cor(5) == "BRANCO" ) entao
+		{
+        	frente(110)
+	}
+	#CURVA PARA A DIREITA
+	
+	se (cor(1) == "BRANCO" e cor(2) != "BRANCO"  e cor(3) == "BRANCO" e cor(4) == "BRANCO" e cor(5) == "BRANCO" ) entao
+		{
+        	direita(300)
+   	 	}
+	se (cor(1) != "BRANCO" e cor(2) == "BRANCO"  e cor(3) == "BRANCO" e cor(4) == "BRANCO" e cor(5) == "BRANCO" ) entao
+		{
+        	direita(300)
+	esperar(1800)
+   	 	}
+	
+	
+
+	#CURVA PARA A ESQUERDA
+	
+	se (cor(1) == "BRANCO" e cor(2) == "BRANCO"  e cor(3) == "BRANCO" e cor(4) == "BRANCO" e cor(5) != "BRANCO" ) entao
+		{
+        	esquerda(300)
+	esperar(1800)
+   	 	}
+	se (cor(1) == "BRANCO" e cor(2) == "BRANCO"  e cor(3) == "BRANCO" e cor(4) != "BRANCO" e cor(5) == "BRANCO" ) entao
+		{
+        	esquerda(300)
+   	 	}	
+	
+	
+
+	
+	#ENCRUZILHADA
+	se (cor(1) == "PRETO" e cor(2) == "PRETO" e cor(3) == "PRETO" e cor(4) == "PRETO" e cor(5) == "PRETO" ) entao
+		{
+		escrever(1, "encruzilhada")
+       		frente(200)
+		}
+	
+	#CURVA 90º ESQUERDA
+
+	se (cor(1) == "BRANCO" e cor(2) == "BRANCO" e cor(4) == "PRETO" e cor(5) == "PRETO" ) entao
+		{
+	acenderled("amarelo")
+	apagarled()
+        	escrever(1, "curva pra esquerda")
+        	esperar(75)
+        	frente(70)
+        	esperar(1600)
+	parar() 
+        	rotacionar (800, negativo(90))
+        	tras(70)
+	esperar(1000)
+    	}
+
+	#CURVA 90º DIREITA
+
+	se (cor(1) == "PRETO" e cor(2) == "PRETO" e cor(4) == "BRANCO" e cor(5) == "BRANCO" ) entao
+		{
+	acenderled("vermelho")
+	apagarled()
+        	escrever(1, "curva pra direita")
+        	esperar(75)
+        	frente(70)
+        	esperar(1600)
+	parar()
+        	rotacionar (800, 90)
+        	tras(70)
+	esperar(1000)
+    	}
+
+	#DESVIAR OBSTACULO
+         se (ultra(1) < 7 e inclinacao() == 0) entao
+    {
+    acenderled("verde")
+    escrever(1, "objeto encontrado")
+    parar()
+    rotacionar(800, 45)
+    frente(170)
+    esperar(1200)
+    rotacionar(800, negativo(45))
+    frente(170)
+    esperar (1000)
+    rotacionar(800, negativo(40))
+    esperar(1000)
+    frente(170)
+    esperar(1200)
+    rotacionar(800, 45)
+    tras(100)
+    }
+
+    #RAMPA
+
+   se  (ultra(3) < 50  e ultra(4) < 50 e inclinacao() >300 e inclinacao() < 350) entao 
+    {
+    escrever(1, "RAMPA")
+    escrevernumero(2, inclinacao())
+    acenderled("azul")
+    apagarled()
+    baixar(160)
+    }
+
+ 	    #RESGATE
+    se (inclinacao() < 300 e ultra(4) < 30) entao
+    {
+    escrever(1, "RESGATE")
+    escrevernumero(2, inclinacao())
+    frenterotacao(700, 60)
+    parar()
+    rotacionar(1000, negativo(90))
+    baixar(1000)
+    esperar(1000)	
+    abrir(1000)	
+    trasrotacao(800,100)
+    
+	se (temvitima() == verdadeiro) entao
+	{
+		escrever(1, "PEGOU VITÍMA")
+		fechar(1000)
+		levantar(1000)
+		esperar(900)
+		frenterotacao(800, 35)
+		rotacionar(1000, 130)
+		 frenterotacao(500, 50)	
+		parar()
+		esperar(800)
+	}
+	
+	se (cor(6) == "PRETO") entao
+	{	
+	escrever(2, "PRETO")
+	parar()
+	rotacionar(1000,180)	
+	baixar(800)
+	esperar(1000)
+	abrir(1000)
+	esperar(1000)
+	trasrotacao(100, 3)
+	frenterotacao(100, 3)
+	}  senao {
+	trasrotacao(1000, 10)
+	rotacionar(1000,117)
+	frenterotacao(1000,50)
+	parar()
+	rotacionar(1000,180)	
+	baixar(1000)
+	esperar(1000)
+	abrir(1000)
+	trasrotacao(1000, 3)
+	frenterotacao(100, 3)
+	}	
+	
+	}
+	
+	#CURVA VERDE
+
+ 	se (cor(4) == "VERDE") entao
+	{
+	escrever (1, "verde")
+	parar()
+	frente (200)
+	esperar(800)
+	rotacionar(800, negativo(95))
+	tras(100)
+	esperar(300)
+	}
+	se (cor(2) == "VERDE") entao
+	{
+	escrever (1, "verde")
+	parar()
+	frente (200)
+	esperar(800)
+	rotacionar(800, 95)
+	tras(100)
+	esperar(300)
+   	 }
+	}
+	
+
+fim
